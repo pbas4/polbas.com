@@ -1,2 +1,0 @@
-# polbas.com
-myWeb
