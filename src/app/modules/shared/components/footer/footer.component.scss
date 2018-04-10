@@ -1,0 +1,44 @@
+@import '../../../../../styles/variables';
+
+#footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 0 2em;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  bottom: 0;
+}
+
+.footer-nav {
+  li {
+    display: inline-block;
+    font-size: .75em;
+    color: $c-dgrey;
+    letter-spacing: .03em;
+    margin-right: 2em;
+    cursor: pointer;
+    transition: .3s color;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $c-green;
+    }
+  }
+}
+
+.footer-open {
+  li {
+    color: lighten($c-green, 40%);
+
+    &:hover {
+      color: $c-dgrey;
+    }
+  }
+}

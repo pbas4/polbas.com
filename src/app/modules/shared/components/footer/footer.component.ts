@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { MenuService } from '../../services';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  public isOpen = false;
+
+  constructor(private _menuService: MenuService) { }
 
   ngOnInit() {
+    this._menuService.open$.subscribe(
+      res => this.isOpen = res
+    );
   }
 
 }

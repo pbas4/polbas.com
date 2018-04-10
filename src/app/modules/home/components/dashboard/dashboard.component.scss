@@ -1,0 +1,66 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
+
+.enter-down {
+  animation: enterTranslateDown .8s forwards;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  margin-left: 10%;
+  position: relative;
+
+  h1 {
+    font-size: 4.5em;
+    letter-spacing: .03em;
+    margin-top: -10%;
+    line-height: 1.4em;
+    color: $c-black;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover span::after{
+      width: 100%;
+    }
+
+    span {
+      position: relative;
+
+      &::after {
+        content: attr(data-hover);
+        color: rgba($c-green, .8);
+        z-index: -1;
+        position: absolute;
+        overflow: hidden;
+        top: -2%;
+        left: 1%;
+        width: 0;
+        transition: width 0.7s;
+      }
+    }
+
+    h4 {
+      transition: all .6s;
+      color: $c-green;
+      font-size: 2rem;
+      font-weight: 200;
+      text-align: center;
+
+      transform-origin: top;
+      transform: scaleY(0) translateY(-20%);
+    }
+  }
+
+  .view-in {
+    transform-origin: top;
+    transform: scaleY(1) translateY(-10%) !important;
+  }
+
+  .view-out {
+    animation: viewOut .6s forwards;
+  }
+}
+

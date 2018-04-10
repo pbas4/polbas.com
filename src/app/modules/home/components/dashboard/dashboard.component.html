@@ -1,1 +1,14 @@
-<app-header></app-header>
+<main class="wrapper enter-down">
+  <h1
+    (mouseenter)="showProjects = true"
+    (mouseleave)="showProjects = false"
+    routerLink="/projects">
+    Web
+    <span data-hover="developer">developer</span>
+    <br>Graphic
+    <span data-hover="designer">designer</span>
+    <h4 [class.view-in]="showProjects">View projects</h4>
+  </h1>
+</main>
+
+<app-footer></app-footer>

@@ -1,3 +1,30 @@
-<p>
-  header works!
-</p>
+<header id="header">
+  <h2
+    class="logo"
+    [class.logo-close]="!open"
+    (click)="logoMenuToggle()"
+    routerLink="/home">
+    POL<span>BAS</span>
+  </h2>
+
+  <span
+    class="icon"
+    [ngClass]="open ? 'icon-open' : 'icon-close'"
+    (click)="menuToggle()">
+  </span>
+
+</header>
+
+<div
+  class="mask"
+  [class.mask-enter]="mask">
+
+  <nav class="navigation-menu">
+    <ul>
+      <li (click)="menuToggle()" data-hover="PROJECTS" routerLink="/projects">PROJECTS</li>
+      <li (click)="menuToggle()" data-hover="WORK PROCESS">WORK PROCESS</li>
+      <li (click)="menuToggle()" data-hover="WHO I AM?" routerLink="/about">WHO I AM?</li>
+      <li (click)="menuToggle()" data-hover="LET'S TALK!">LET'S TALK!</li>
+    </ul>
+  </nav>
+</div>

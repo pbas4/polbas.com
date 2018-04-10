@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HOME_ROUTES } from './home.router';
+import { ABOUT_ROUTES } from './about.router';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { DashboardComponent } from './components';
+import { AboutComponent, DescriptionComponent, StudiesComponent } from './components';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    AboutComponent,
+    StudiesComponent,
+    DescriptionComponent
   ],
   imports: [
-    HOME_ROUTES,
+    ABOUT_ROUTES,
     SharedModule,
     CommonModule
   ],
   providers: []
 })
-export class HomeModule { }
+export class AboutModule { }

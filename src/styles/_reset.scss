@@ -1,35 +1,39 @@
-@import '_variables';
+@import 'variables';
 
-*{
-    // font-family: $ff-all;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
 }
-html{
+
+html {
     height: 100%;
     width: 100%;
-    // padding: 40px;
 }
-body{
+
+body {
     height: 100%;
     width: 100%;
     background-color: $c-sgrey;
 }
-ul{
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-input, textarea{
+
+input, textarea {
     border: 0;
     background-color: $c-sgrey;
     &:focus{
         outline: none;
     }
 }
+
 ::selection {
   background: $c-dgrey;
   color: $c-sgrey;
